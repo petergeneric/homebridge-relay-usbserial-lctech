@@ -1,0 +1,22 @@
+{
+  "pluginAlias": "relay-usbserial-lctech",
+  "pluginType": "platform",
+  "singular": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "device": {
+        "title": "TTY device filename to use - e.g. /dev/ttyUSB0",
+        "type": "string",
+        "required": true
+      },
+      "relayCount": {
+        "title": "The number of relays on your board",
+        "type": "string",
+        "default": 1,
+        "maximum": 16,
+        "required": true
+      }
+    }
+  }
+}
