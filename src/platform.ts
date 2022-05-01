@@ -33,8 +33,9 @@ export class RelayPlatform implements DynamicPlatformPlugin {
 	) {
 		this.log.debug('Finished initializing platform:', this.config.name);
 
-		if (!this.config.relayCount)
-			log.warn("relayCount omitted! Defaulting to 1");
+		if (!this.config.relayCount) {
+			log.warn('relayCount omitted! Defaulting to 1');
+		}
 
 		const relayCount = this.config.relayCount ? parseInt(this.config.relayCount) : 1;
 

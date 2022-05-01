@@ -1,7 +1,7 @@
 import {Service, PlatformAccessory} from 'homebridge';
 
 import {RelayPlatform} from './platform';
-import {RelayClient, RelayState} from './relay';
+import {RelayClient} from './relay';
 
 export class RelayPIRAccessory {
 	private service: Service;
@@ -50,7 +50,7 @@ export class RelayPIRAccessory {
 
 			// After a short time, request a state update
 			setTimeout(() => {
-				this.relays.poll()
+				this.relays.poll();
 			}, 500);
 
 			callback();

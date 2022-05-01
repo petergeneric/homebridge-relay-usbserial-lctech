@@ -71,11 +71,11 @@ export class RelayClient {
 
 		const ret: RelayState[] = [];
 		for (const line of lines) {
-			if (line.indexOf(':') != -1) {
+			if (line.indexOf(':') !== -1) {
 
 				const parts = line.split(':');
 				const relayNum = parseInt(parts[0].substring(2));
-				const state = (parts[1].trim() == 'ON');
+				const state = (parts[1].trim() === 'ON');
 
 				ret.push(new RelayState(relayNum, state));
 			}
