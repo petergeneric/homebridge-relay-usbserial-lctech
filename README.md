@@ -6,7 +6,7 @@
 </p>
 
 
-# relay-usbserial-lctech Homebridge Plugin
+# LCTech USB-Serial Relay Homebridge Plugin
 
 This is a plugin for Homebridge that exposes LCTech USB-Serial Relays to HomeKit
 
@@ -17,7 +17,7 @@ Example config for a device with 2 relays:
 ```
     "platforms": [
         {
-            "platform": "relay-usbserial-lctech",
+            "platform": "homebridge-relay-usbserial-lctech",
             "device": "/dev/ttyUSB0",
             "relayCount": "2",
         }
